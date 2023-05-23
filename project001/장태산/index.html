@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장태산자연휴양림</title>
+    <!-- 그리드가이드연결 -->
+    <!-- <link rel="stylesheet" href="css/grid-guide.css"> -->
+    <!-- 외부스타일시트연결 -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+
+            //listTitle의 li를 클릭했을 때, 각 순번에 맞는 listBox의 ul이 보여라 
+            $('.tour li').click(function(){
+
+
+            //변수만들기(순번찾기) 
+                let a =$(this).index()
+                console.log(a)
+            // f12 console
+                $('.imgBox>div').hide()
+                $('.imgBox>div').eq(a).show()
+            })
+
+
+        })
+        // 변하는수 변수
+    </script>
+
+
+
+
+
+
+
+
+</head>
+<body>
+    <header class="boxA">
+        <div class="box1">
+            <h1 class="logo">장태산자연휴양림</h1>
+        </div>
+        <div class="box2">
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">휴양림소개</a></li>
+                    <li><a href="#">시설및이용안내</a></li>
+                    <li><a href="#">숲체험</a></li>
+                    <li><a href="#">열린공간</a></li>
+                    <li><a href="#">참여마당</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="boxB">
+        <article class="box3">
+            <div class="box3-1">
+                <div class="hero">
+                    <img src="img/header_bg.jpg" alt="">
+                </div>
+            </div>
+            <div class="box3-2">
+                <div class="hero_arrow">
+                    <span class="left"> < </span>
+                    <span class="right">></span>
+                    <div class="hero_num">
+                        <em>01</em>/03
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="box4">
+            <div class="box4-1">
+                <div class="info">
+                    <h1 class="title">Lorem ipsum dolor sit amet</h1>
+                    <p class="top_txt">Lorem ipsum dolor sit amet <em>consectetur adipisicing</em> elit.<br> Ratione perferendis quaerat voluptatum dolor, vero praesentium nisi deserunt corrupti, voluptates eveniet numquam</p>
+                    <p class="bottom_txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, <br>architecto tempore error nulla nisi nobis rem perferendis est non eos provident voluptatem cupiditate at vitae fuga minus<br> minima <em>aspernatur voluptatum</em>.</p>
+                </div>
+            </div>
+        </article>
+        <article class="box5">
+            <div class="box5-1">
+                <img src="img/g001.jpg" alt="" class="qnaimg">
+            </div>
+            <div class="box5-2 qna">
+                <h2>장태산자연휴양림</h2>
+                <div class="listBox">
+                    <ul>
+                        <li>list1</li>
+                        <li>list2</li>
+                        <li>list3</li>
+                    </ul>
+                    <button>문의하기</button>
+                </div>
+                <p>대전장태산휴양림 주소</p>
+            </div>
+        </article>
+        <article class="box6 tour">
+            <div class="box6-1">
+                <h1 class="title">
+                    주변관광안내
+                </h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quasi eius inventore praesentium laborum. Sapiente, officia enim. Dolorem, qu</p>
+            </div>
+            <div class="box6-2">
+                <ul>
+                    <li>Tab1</li>
+                    <li>Tab2</li>
+                    <li>Tab3</li>
+                    <li>Tab4</li>
+                    <li>Tab5</li>
+                    <li>Tab6</li>
+                    <li>Tab7</li>
+                    <li>Tab8</li>
+                    <li>Tab9</li>
+                </ul>
+            </div>
+            <div class="box6-3">
+                <div class="imgBox">
+                    <div class="on"><a href="#">1. 바로가기</a>
+                        <img src="https://picsum.photos/1000/280" alt=""></div>
+                    <div ><a href="#">2. 바로가기</a>
+                        <img src="https://picsum.photos/1000/280" alt=""></div>
+                    <div><a href="#">3. 바로가기</a>
+                        <img src="https://picsum.photos/1000/280" alt=""></div>
+                    <div><a href="#">4. 바로가기</a>
+                        <img src="https://picsum.photos/1000/280" alt=""></div>
+                    <div><a href="#">5. 바로가기</a>
+                        <img src="https://picsum.photos/1000/280" alt=""></div>
+                    <div><a href="#">6. 바로가기</a>
+                        <img src="https://picsum.photos/1000/280" alt=""></div>
+                    <div><a href="#">7. 바로가기</a>
+                        <img src="https://picsum.photos/1000/280" alt=""></div>
+                    <div><a href="#">8. 바로가기</a>
+                        <img src="https://picsum.photos/1000/280" alt=""></div>
+                    <div><a href="#">9. 바로가기</a>
+                        <img src="https://picsum.photos/1000/280" alt=""></div>
+                </div>
+            </div>
+        </article>
+        <article class="box7">
+            <div class="box7-1">
+                <h1 class="title">Notice</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero earum error non consectetur praesentium, sint dolore aperiam dolorem laborum fugit </p>
+            </div>
+            <div class="box7-2">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+            </div>
+            <div class="box7-3">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div class="txt">
+                                <h3>타이틀내용</h3>
+                                <em>작성자</em>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda tempora repellendus natus magni aliquid aut tenetur eligendi cupiditate beatae voluptate! Reprehenderit saepe officia, velit quis quas quidem quisquam dignissimos fugiat.
+                            </div>
+                            <span>2022.10.10</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="txt">
+                                <h3>타이틀내용</h3>
+                                <em>작성자</em>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda tempora repellendus natus magni aliquid aut tenetur eligendi cupiditate beatae voluptate! Reprehenderit saepe officia, velit quis quas quidem quisquam dignissimos fugiat.
+                            </div>
+                            <span>2022.10.10</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <article class="box8">
+            <div class="box8-1">
+                <h1 class="title">포토갤러리</h1>
+            </div>
+            <div class="box8-2">
+                <div class="trailer">
+                    <ul>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                    </ul>
+                    <ul>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                        <li><img src="" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+        <article class="box9">
+            <div class="box9-1">
+                <div class="gna">
+                    <h2>자주하는질문</h2>
+                    <ul>
+                        <li>
+                            <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quasi praesentium neque labore aliquid! Obcaecati illum ducimus, accusamus magnam quaerat i</strong>
+                            <em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em>
+                        </li>
+                        <li>
+                            <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quasi praesentium neque labore aliquid! Obcaecati illum ducimus, accusamus magnam quaerat i</strong>
+                            <em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box9-2">
+                <div class="reser">
+                    <h2>예약시주의사항</h2>
+                    <ul>
+                        <li>주의사항안내문1</li>
+                        <li>주의사항안내문2</li>
+                        <li>주의사항안내문3</li>
+                        <li>주의사항안내문4</li>
+                        <li>주의사항안내문5</li>
+                        <li>주의사항안내문6</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box9-3">
+                <div class="program">
+                    <h2>프로그램예약안내</h2>
+                    <div class="listBox">
+                        <div>가족숲체험<span>예약하기</span></div>
+                        <div>단체숲체험<span>예약하기</span></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer class="boxC">footer</footer>
+</body>
+</html>

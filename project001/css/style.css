@@ -1,0 +1,161 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'EF_jejudoldam';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+/* 전체설정 */
+*{
+    margin: 0;
+    padding: 0;
+}
+ul, ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:#000;
+}
+img{
+    border:none;
+    vertical-align: bottom;
+}
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 14px;
+}
+
+
+
+/* header 배경설정 */
+header{
+    background-image: url(../img/유물대표사진.jpg);
+    height: 1200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1440px;
+    filter: brightness(90%); 
+}
+
+/* boxA 가로정렬 */
+.boxA{
+    display: flex;
+    /* background-color: antiquewhite; */
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #fff;
+    /* 나중에 화이트로 바꾸기 */
+    height: 100px;
+}
+
+
+
+/* 로고 설정 */
+.logo{
+    width: 120px;
+    height: 80px;
+    /* background-color: aqua; */
+    background-image: url(../img/logo_1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+
+/* 메뉴 설정 */
+.gnb{
+
+}
+.gnb ul{
+    display: flex;
+}
+.gnb ul li{
+
+}
+.gnb ul li a{
+    display: block;
+    padding: 10px 30px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    /* background-color: brown;  */
+    font-family: 'LINESeedKR-Bd';
+}
+.gnb ul li a:hover{
+    color:#bc9c8a;
+}
+
+
+
+
+/* hero 설정 */
+.hero{
+
+}
+.hero p:nth-child(1){
+    color: #fff;
+    font-size: 15px;
+    font-weight: normal;
+}
+.hero p:nth-child(2){
+    font-family: 'EF_jejudoldam';
+    font-size: 50px;
+    color:#fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 미디어 제이쿼리 구간/////////////////////////////////////// */
+
+/* 768px 이상 구간 */
+@media(min-width:768px) {
+
+}
+
+
+/* 1140px 이상일 때 */
+@media(min-width:1140px) {
+
+}

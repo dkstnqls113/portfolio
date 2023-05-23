@@ -1,0 +1,344 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 14px;
+}
+
+/* 로고설정 */
+.logo {
+    width: 150px;
+    height: 90px;
+    background-image: url(../img/logo.png);
+    text-indent: -9999px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* gnb 설정 */
+.gnb {}
+
+.gnb ul {
+    display: flex;
+}
+
+.gnb ul li {}
+
+.gnb ul li a {
+    padding: 10px 30px;
+    display: block;
+    color: #333;
+}
+
+/* hero 설정 */
+.hero {
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    transform: translateY(-100px);
+}
+
+/* hero화살표설정 */
+
+.hero_arrow {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.hero_arrow span {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    color: #006837;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.hero_arrow span:hover {
+    color: #333;
+}
+
+
+.hero_num {
+    position: absolute;
+    right: 20%;
+    top: 30%;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.hero_num em {
+    font-size: 18px;
+    font-style: normal;
+    margin-right: 5px;
+    color: #006837;
+}
+
+
+
+/* 전체 타이틀 설정 */
+.title{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.title::before{
+    content: "\00A4";
+    color:#006837;
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+
+
+/* info 설정 
+info안에는 p만 있는게 아니기 때문에 nth-child 못줌 */
+.info .title{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.info .title::before{
+    content: "\00A4";
+    color:#006837;
+    font-size: 30px;
+    margin-right: 5px;
+}
+/* before 가상선택자임 클릭했을 때 호버값 안들어가게 하려고 
+https://www.w3schools.com/ 래퍼런스 css-래퍼런스 CSS Entities
+역슬러시는 원화 표시누르면 됨 */
+
+.info .top_txt{
+    font-size: 14px;
+    margin-bottom: 15px;
+    color:#474747;
+}
+
+
+.info .top_txt em{
+    font-weight: bold;
+    font-style: normal;
+}
+
+.info .bottom_txt{
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+/* letter-spacing 자간 설정 */
+
+.info .bottom_txt em{
+    font-size: 24px;
+    color: #f15a25;
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+/* 문의하기 설정 */
+.qnaimg{
+    width: 100%;
+}
+.qna{
+
+}
+.qna h2{
+    font-size: 22px;
+    color: #006837;
+    font-weight: bold;
+}
+.qna .listBox{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.qna ul{
+    width: 60%;
+    
+}
+/* list-style 은 한번 정해지면 색깔이랑 스타일을 바꾸기 어려움 */
+.qna li{
+    padding: 15px 0;
+    border-bottom: dotted 2px #222;
+    margin-bottom: 10px;
+    margin-right: 30px
+}
+.qna li::before{
+    content: '\2022';
+    font-size: 28px;
+    vertical-align: middle;
+    color: #006837;
+}
+.qna li:nth-child(2):before{
+    color:#f15a25;
+}
+
+.qna button{
+    border: none;
+    padding: 20px 45px;
+    color:#fff;
+    background-color: #006837;
+    cursor: pointer;
+}
+.qna button:hover{
+    opacity: 0.6;
+}
+.qna p{
+        font-size: 18px;
+        letter-spacing: 1px;
+        margin-top: 20px;
+
+}
+
+
+
+/* 주변관광안내 설정 */
+.tour{
+    background-color: rgba(241, 90, 37, 0.1);
+    padding: 20px 40px;
+}
+.tour p{
+margin-top: -20px;
+margin-bottom: 20px;
+}
+.tour ul{
+    display: flex;
+}
+.tour li{
+padding: 20px;
+color:#bbb;
+}
+.tour .imgBox{
+background-color: #006837;
+margin-top: 20px;
+position: relative;
+height: 380px;
+}
+.tour .imgBox>div{
+display: flex;
+align-items: center;
+position: absolute;
+height: 380px;
+width: 100%;
+left: 0;
+top: 0;
+display: none;
+}
+.tour .imgBox>div.on{
+    display: flex;
+}
+.tour .imgBox a{
+display: block;
+padding: 20px 40px;
+background-color: #f15a25;
+color: #fff;
+font-size: 18px;
+}
+.tour .imgBox img{
+position: absolute;
+right: -100px;
+top:50px;
+}
+
+/* Lorem Picsum */
+
+/* 박스 위아래 여백설정 */
+.box3{
+    padding-bottom: 20px;
+}
+.box4{
+    padding-bottom: 40px;
+}
+.box5{
+padding-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 미디어쿼리구간설정 //////////////////////////////////*/
+
+/* 768px 이상구간설정////////////////////////////////// */
+@media(min-width:768px) {
+
+
+    /* 레이아웃설정 */
+
+    /* 박스1과 박스2의 가로정렬 */
+    .boxA {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* 박스5-1 과 박스 5-2 의 가로정렬 */
+    .box5 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .box5-1, .box5-2 {
+        width: 46%;
+    }
+
+    /* 박스9-1,박스9-2,박스9-3의 가로정렬 */
+    .box9 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .box9>div {
+        width: 32%;
+    }
+
+
+
+}
+
+
+/* 1140px이상일때////////////////// */
+@media(min-width:1140px) {
+
+    header, .box3-2, .box4-1, .box5, .box6{
+        width: 1100px;
+        margin: 0 auto;
+    }
+}
+
+/* 사이즈가 있는 아이들은 무조건 마진 오토 내부에 있는 아이들은 조절할 수 없음 */
