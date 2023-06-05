@@ -209,7 +209,7 @@ header{
 .boxB {
     width: 100%;
 text-align: center;
-margin-top: 7%;
+margin-top: 100px;
 /* background-color: aqua; */
 }
 .hero{
@@ -341,29 +341,29 @@ margin-right: 15px;
 
 
 
-/* 동그라미 안에 텍스트 설정 */
+/* 동그라미 안에 텍스트 설정 
 .boxC .titleBox{
-    /* background-color: aquamarine; */
+    background-color: aquamarine; 
 }
 .boxC .titleBox p{
-    /* position: absolute; */
-    /* background-color: aqua; */
+    position: absolute; 
+    background-color: aqua; 
 }
 .boxC .titleBox p:nth-child(1){
-    /* left: 26.7%;
-    top: 48%; */
+    left: 26.7%;
+    top: 48%; 
     color: #fff;
     font-size: 18px;
 }
 .boxC .titleBox p:nth-child(2){
-    /* left: 36.7%;
-    top: 48%; */
+    left: 36.7%;
+    top: 48%; 
     color: #fff;
     font-size: 18px;
 }
 .boxC .titleBox p:nth-child(3){
-    /* left: 47.2%;
-    top: 48%; */
+    left: 47.2%;
+    top: 48%; 
     color: #fff;
     font-size: 18px;
 }
@@ -379,7 +379,7 @@ margin-right: 15px;
     top: 48%;
     color: #fff;
     font-size: 18px;
-}
+}*/
 
 
 
@@ -393,7 +393,7 @@ margin-right: 15px;
     /* background-color: red; */
     width: 264px;
     height: 64px;
-    margin:0 auto;
+    margin:50px auto;
 }
 .circle{
     display: flex;
@@ -454,9 +454,57 @@ margin-right: 15px;
 
 
 
-
-
-
+/* 관람시간 관람료 설정 */
+.time{
+/* background-color: red; */
+margin-top: 68px;
+}
+.time ul{
+display: flex;
+justify-content: space-around;
+}
+.time ul li{
+    background-color: #D4BEAA;
+    width: 450px;
+    height: 200px;
+    opacity: 0.92;
+    border-radius: 15px;
+}
+.time ul li p{
+    color:#fff;
+        text-align: center;
+        opacity: 1;
+}
+.time ul li p:nth-child(1){
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.time ul li p:nth-child(2){
+    font-size: 18px;
+    margin-top: 20px;
+}
+.time ul li p:nth-child(3){
+    font-size: 18px;
+}
+.time ul li p:nth-child(4){
+    font-size: 18px;
+}
+.time ul li p:nth-child(5){
+    font-size: 18px;
+}
+.time ul li p i{
+    margin-right: 10px;
+}
+.time-1 li:nth-child(2) .out{
+    font-size: 13px;
+}
+.time-1 li:nth-child(4) p:nth-child(3){
+    font-size: 18px;
+}
+.time-1 li:nth-child(4) p{
+    line-height: 30px;
+}
 
 
 
@@ -667,8 +715,8 @@ font-size: 20px;}
     color:#bc9c8a;
     font-size: 14px;
     position: absolute;
-    top: -500px;
     left: -35%;
+    top:-520px;
     width: 170px;
     border: 7px solid #bc9c8a;
     display: none;
@@ -946,6 +994,7 @@ table, tr, td{
     width: 1200px;
     border-radius: 15px 0 0 15px;
     margin-top: 5.5%;
+    /* background-color: red; */
 }
 
 
@@ -1026,11 +1075,12 @@ table, tr, td{
 
 /* 공지사항 박스 sns 설정 */
 .box3-3{
-    background-color: #DDD7CF;
+    /* background-color: #DDD7CF; */
     width: 130px;
     height: 625px;
     border-radius: 0 15px 15px 0;
     margin-top: 5.5%;
+    margin-left: 20px;
 }
 .box3-3 li:nth-child(1){
     height: 125px;
