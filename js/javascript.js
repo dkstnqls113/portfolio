@@ -124,16 +124,28 @@ $('section').mousewheel(function(event,delta){
 setTimeout(function(){
     $('section:nth-child(3) .ne_sec').css({'opacity':'1'})
 },3000)
+<<<<<<< HEAD
 setTimeout(function(){
     $('section:nth-child(3) .ne_box ul li').css({'opacity':'1'})
 },3000)
+=======
+// setTimeout(function(){
+//     $('section:nth-child(3) .ne_box ul li').css({'opacity':'1'})
+// },3000)
+>>>>>>> 8f9095e0643c977191c3dc9516f1cce5e0685b4c
 // 이거 풀어
 setTimeout(function(){
     $('section:nth-child(3) .wa').css({'opacity':'1'})
 },3000)
+<<<<<<< HEAD
 setTimeout(function(){
     $('section:nth-child(3) .list ul li').css({'opacity':'1'})
 },3000)
+=======
+// setTimeout(function(){
+//     $('section:nth-child(3) .list ul li').css({'opacity':'1'})
+// },3000)
+>>>>>>> 8f9095e0643c977191c3dc9516f1cce5e0685b4c
 // 이거 풀어
 
 
@@ -145,6 +157,7 @@ $('.list ul li').click(function(){
 })
 
 // list에 li를 클릭했을 때 ne_box ul li가 차례대로 나와라
+<<<<<<< HEAD
 $('.list ul li').eq(0).click(function(){
     $('.ne_box ul li').css({'opacity':'0'})
     $('.ne_box ul li').eq(0).css({'opacity':'1'})
@@ -165,5 +178,27 @@ $('.list ul li').eq(4).click(function(){
     $('.ne_box ul li').css({'opacity':'0'})
     $('.ne_box ul li').eq(4).css({'opacity':'1'})
 })
+=======
+// $('.list ul li').eq(0).click(function(){
+//     $('.ne_box ul li').css({'opacity':'0'})
+//     $('.ne_box ul li').eq(0).css({'opacity':'1'})
+// })
+// $('.list ul li').eq(1).click(function(){
+//     $('.ne_box ul li').css({'opacity':'0'})
+//     $('.ne_box ul li').eq(1).css({'opacity':'1'})
+// })
+// $('.list ul li').eq(2).click(function(){
+//     $('.ne_box ul li').css({'opacity':'0'})
+//     $('.ne_box ul li').eq(2).css({'opacity':'1'})
+// })
+// $('.list ul li').eq(3).click(function(){
+//     $('.ne_box ul li').css({'opacity':'0'})
+//     $('.ne_box ul li').eq(3).css({'opacity':'1'})
+// })
+// $('.list ul li').eq(4).click(function(){
+//     $('.ne_box ul li').css({'opacity':'0'})
+//     $('.ne_box ul li').eq(4).css({'opacity':'1'})
+// })
+>>>>>>> 8f9095e0643c977191c3dc9516f1cce5e0685b4c
 
 });//제이쿼리 끝
