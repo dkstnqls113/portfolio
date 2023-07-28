@@ -1,0 +1,150 @@
+@charset 'UTF-8';
+
+/* 류준열 제목 글씨 */
+@font-face {
+    font-family: 'MYYeongnamnu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYYeongnamnu.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 전체설정 */
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+ul, ol{
+    list-style: none;
+}
+img{
+    vertical-align: bottom;
+}
+
+
+
+/* 로고설정 */
+h1{
+    width: 90px;
+    height: 80px;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    z-index: 999;
+}
+h1 i{
+    color: #fff;
+    font-size: 30px;
+}
+
+/* 메뉴설정 */
+nav{
+    width: 200px;
+    height: auto;
+    /* background-color: beige; */
+    position: fixed;
+    left: 50px;
+    top: 120px;
+    /* display: none; */
+    /* 처음에는 메류를 보이게 하기 */
+    /* background-color: blueviolet; */
+    z-index: 999;
+}
+nav ul{
+    width: 100%;
+}
+nav ul li{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: #fff;
+    letter-spacing: 2px;
+}
+nav ul li span{
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    margin-top: 15px;
+    transition: all 1.2s;
+}
+nav ul li:hover{
+    color: #fff;
+}
+nav ul li:hover span{
+    width: 100%;
+}
+nav ul li.on{
+    color: #fff;
+}
+nav ul li.on span{
+    width: 100%;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    overflow: hidden;
+}
+/* fillmography 설정 */
+.fillmography{
+    position: relative;
+    background-color: #222;
+}
+.fillmography .menu{
+    width: 300px;
+    height: 500px;
+    /* background-color: orange; */
+    position: absolute;
+    z-index: 999;
+    right:5%;
+    top: 5%;
+}
+.fillmography .menu li{
+    width: 400px;
+    /* background-color: blue; */
+}
+.fillmography .menu li a{
+    display: flex;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+    line-height: 40px;
+    display: flex;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.fillmography .menu li:hover span{
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.8s;
+    margin-right: 20px;
+}
+.fillmography .menu li a span{
+    /* background-color: red; */
+    width: 50px;
+    height: 50px;
+}
+
+
+/* 무비 박스 설정 */
+.fillmography_box{
+    width: 95%;
+    height: 60%;
+    /* background-color: red; */
+}

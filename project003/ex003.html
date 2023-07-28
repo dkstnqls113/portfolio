@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex003예제</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 3000px;
+        }
+        h1{
+            position: fixed;
+            left: 50px;
+            top: 50px;
+            z-index: 999;
+        }
+        .box1{
+            width: 100%;
+            height: 100vh;
+            background-color: antiquewhite;
+            font-size: 300px;
+            font-weight: bolder;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            background-image: url(img/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            /* 글씨에만 됨 */
+            /* 글씨를 투명하게 적용하여 배경을 넣는다. */
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+        .box2{
+            width: 100%;
+            height: 100vh;
+            border: 20px solid red;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        .box2>p{
+            width: 2500px;
+            height: 500px;
+            background-color: lightcoral;
+            position: absolute;
+            top: 150px;
+            left: 200px;
+        }
+        /* w3school referance보기 */
+
+
+        .box2.fix{
+            position: fixed;
+            left: 0;
+            top:0;
+        }
+    </style>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                let sc = $(this).scrollTop();
+                let sNum = Math.floor(sc)
+
+
+                let bht = $('.box1').height()
+                let lsc = (sNum-bht);
+                $('h1').text((sNum-bht)/10);
+
+
+                if(sc>=bht){
+                    $('.box2').addClass('fix');
+                    $('.box2 p').css({'left':200-lsc})
+                }
+                else{
+                    $('.box2').removeClass('fix')
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>00</h1>
+    <div class="box1">포트폴리오</div>
+    <div class="box2">
+        <p></p>
+    </div>
+</body>
+</html>

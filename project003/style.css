@@ -1,0 +1,2002 @@
+@charset 'UTF-8';
+/* 류준열 제목 글씨 */
+@font-face {
+    font-family: 'MYYeongnamnu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYYeongnamnu.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 어바웃 글씨체 */
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+/* 필모그래피 봄바람체 */
+@font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+/* 전체설정 */
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+ul, ol{
+    list-style: none;
+}
+img{
+    vertical-align: bottom;
+}
+body{
+    overflow-x: hidden;
+}
+/* 로고설정 */
+h1{
+    width: auto;
+    height: 80px;
+    position: fixed;
+    left: 45px;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    z-index: 999;
+    display: none;
+    font-family: 'MYYeongnamnu';
+}
+h1 a{
+    color: #D6806E;
+    font-size: 50px;
+}
+/* 메뉴설정 */
+nav{
+    width: 200px;
+    height: auto;
+    /* background-color: beige; */
+    position: fixed;
+    left: 50px;
+    top: 120px;
+    /* display: none; */
+    /* 처음에는 메류를 보이게 하기 */
+    /* background-color: blueviolet; */
+    z-index: 999;
+}
+nav ul{
+    width: 100%;
+}
+nav ul li{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: #fff;
+    letter-spacing: 2px;
+}
+nav ul li span{
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    margin-top: 15px;
+    transition: all 1.2s;
+    /* display: none; */
+}
+nav ul li:nth-child(1) span{
+    /* opacity:0; */
+}
+nav ul li:hover{
+    color: #fff;
+}
+nav ul li:hover span{
+    width: 100%;
+}
+nav ul li.on{
+    color: #fff;
+}
+nav ul li.on span{
+    width: 100%;
+}
+
+
+/* wrap 설정 */
+#wrap{
+
+}
+
+/* section 설정 */
+#wrap section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* 첫번째 section 설정 */
+/* 이렇게 할 때는 꽉채워야함 */
+section:nth-child(1){
+    /* background-color: #222; */
+    background-image: url(img/bg_gif6.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+    position: fixed;
+    z-index: 1;
+}
+section:nth-child(1){
+    flex-direction: column;
+    position: relative;
+}
+section:nth-child(1) div{
+    cursor: pointer;
+}
+section:nth-child(1) div:hover{
+    color: #fff;
+}
+
+/* 메인이미지 설정 */
+.main_img{
+    position: absolute;
+    background-image: url(img/main_img.png);
+    /* background-color: red; */
+    background-size: cover;
+    width: 1000px;
+    height: 800px;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 50%;
+    z-index: 10;
+    margin-left: 450px;
+}
+/* 그라데이션 동그라미 설정 */
+section:nth-child(1) .g_circle{
+    position: absolute;
+    z-index: 9;
+}
+/* 퍼지는 동그라미 설정 */
+section:nth-child(1) .c_button{
+    /* display: none; */
+    left: 50%;
+    top: 50%;
+    margin-top: -350px;
+    margin-left: -350px;
+    perspective: 1000;
+    backface-visibility: hidden;
+    z-index: 3;
+    width: 700px;
+    height: 700px;
+    /* background-color: red; */
+}
+section:nth-child(1) .circle_button {
+position: absolute;
+z-index: 3;
+top: 50%;
+left: 50%;
+margin-left: -375px;
+margin-top: -375px;
+display: block;
+width: 750px;
+height: 750px;
+border: none;
+border-radius: 50%;
+background: #fdcaec;
+cursor: pointer;
+box-shadow: 0 0 0 0 rgba(253, 202, 236, 0.5);
+animation: circle 3s infinite;
+}
+
+@keyframes circle {
+0% {
+    transform: scale(.9);
+}
+70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(253, 202, 236, 0.5);
+}
+100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(253, 202, 236, 0.5);
+}
+}
+/* 효과 스티커 */
+section:nth-child(1) .effect{
+    position: absolute;
+    z-index: 999;
+    width: 1400px;
+    height: 900px;
+    top: 30%;
+    /* background-color: red; */
+}
+section:nth-child(1) .effect img:nth-child(1){
+    position: absolute;
+    z-index: 999;
+    left: 5%;
+    top: 30%;
+}
+section:nth-child(1) .effect img:nth-child(2){
+    position: absolute;
+    right: 25%;
+    margin-right: 100px;
+    top: 30%;
+    z-index: 999;
+}
+/*.p11{
+    background-color: red;
+    z-index: 999;
+    width: 1000px;
+    height: 1800px;
+    position: absolute;
+    left: 50%;
+    margin-left: -500px;
+} */
+/*.main_img .p12{
+    background-color: orange; 
+    position: absolute;
+    right: 0;
+    z-index: 998;
+    bottom: 0;
+}*/
+.wel{
+    position: absolute;
+    z-index: 999;
+    color: #fff;
+    font-size: 100px;
+    font-family: 'MYYeongnamnu';
+    bottom: 10%;
+    left: 3%;
+}
+/* 호버 설정 */
+/* section:nth-child(2) .about_1>ul>li:hover{
+    width: 1300px;
+    height: 200px;
+    transition: all 3s;
+} */
+/* about 설정 */
+section:nth-child(2){
+    background-color: #CFCFCF;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* 배경이미지 설정*/
+section:nth-child(2) .wrap_1 {	
+    position:absolute;
+    top: 0;
+    left: 0;
+    width:100%; 
+    height:100%; 
+    min-width:1024px; 
+    min-height:768px;
+    z-index: 2;    
+    /* background-color: red; */
+    background:url(img/bg_1.jpg) no-repeat center bottom;
+    background-size:cover;
+}
+
+/* section 영역 레이아웃 */
+section:nth-child(2) .wrap_1 .contents {
+    position:absolute; 
+    top:0px; 
+    right:0px;
+    width:100%; 
+    height:100%;
+}
+section:nth-child(2) .wrap_1 .contents article {
+    position:relative;	
+    width:12%; 
+    height:100%;
+    background:url(../img/divider.png) no-repeat left center;
+    float:right;	
+    overflow:hidden;
+}
+
+/* article 제목 */
+section:nth-child(2) .wrap_1 .contents article h2 {
+    position:absolute;
+    top:70px;	
+    left:20px;	
+    padding-left:15px;	
+    border-left:3px solid #555;	
+    font:bold 20px Raleway; 
+    color:#666;	
+    z-index:5;	
+    transition:all 0.5s;
+}
+section:nth-child(2) .wrap_1 .contents article div {	
+    position:absolute;	
+    left:0px; 
+    top:70px;	
+    width:100%; 
+    height:0px;	
+    background:#000;	
+    opacity:0.5;	
+    z-index:4;	
+    transition:all 0.5s;
+}
+
+/* article 제목 호버 효과 */
+section:nth-child(2) .wrap_1 .contents article:hover h2 { 
+    color:#ccc; 
+    border-left:3px 
+    solid #ccc;
+}
+section:nth-child(2) .wrap_1 .contents article:hover div { 
+    top:70px; 
+    height:70px;
+}
+
+/* article 사진 */
+section:nth-child(2) .wrap_1 .contents article img {	
+    position:absolute;
+    width:765px; 
+    height:100%;	
+    margin-top:0px;
+    margin-left:-100px;	
+    opacity:0;	
+    z-index:3;
+}
+section:nth-child(2) .wrap_1 .contents article:nth-child(3) img{
+    width: 1100px;
+    height: 100%;
+} 
+section:nth-child(2) .wrap_1 .contents article:nth-child(1) img{
+    width: 900px;
+    height: 1175px;
+} 
+
+/* article 숨겨진 컨텐츠 */
+section:nth-child(2) .wrap_1 .contents article h3 {
+    position:absolute;	
+    bottom:210px;	
+    right:-480px;	
+    font: 40px Raleway; 
+    color:#fff;	
+    text-align:right;	
+    opacity:1;	
+    z-index:4;
+    font-weight: bold;	
+}
+section:nth-child(2) .wrap_1 .contents article p {	
+    position:absolute;
+    bottom:50px; 
+    right:-450px;	
+    width:400px; 
+    height:150px;	
+    font:18px/1.5 arial; 
+    color:#fff;	
+    text-align:right;	
+    opacity:0.8;	
+    z-index:5;
+    font-weight: bold;
+}
+
+/* about 움직이는 글씨 설정 */
+section:nth-child(2) .about_3{
+    width: 100%;
+    height: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    /* background-color: blueviolet; */
+    position: absolute;
+    bottom: 0;
+    z-index: 999;
+}
+section:nth-child(2) .about_3 .about_box{
+    display: flex;
+}
+.about_box ul:nth-child(1){
+    /* background-color: lightcoral; */
+    display: flex;
+    position: absolute;
+    width: 2000px;
+}
+.about_box ul:nth-child(2){
+    /* background-color: lightblue; */
+    display: flex;
+    position: absolute;
+    width: 2000px;
+}
+.about_3 li{
+    width: 19%;
+    height: 150px;
+    /* border: 2px solid #000; */
+    box-sizing: border-box;
+    font-size: 100px;
+    color: #fff;
+    font-weight: bold;
+    opacity: 0.2;
+    /* background-color: red; */
+}
+.about_3 ul:nth-child(1){
+    left: 0;
+    animation: ani1 30s linear infinite ;
+}
+.about_3 ul:nth-child(2){
+    left: 100%;
+    animation: ani2 30s linear infinite ;
+}
+.about_3:hover ul:nth-child(1){
+    /* animation-play-state: paused; */
+    /* 마우스를 올려놨을 때 멈추게 하는 명령 */
+}
+.about_3:hover ul:nth-child(2){
+    /* animation-play-state: paused; */
+}
+/* .about li:hover{
+    color: red;
+} */
+@keyframes ani1 {
+    0% {left: 0;}
+    50% {left: -100%;}
+    50.00001% {left: 100%;}
+    100%{left: 0;}
+}
+@keyframes ani2 {
+    0% {left: 100%;}
+    50% {left: 0;}
+    100% {left: -100%;}
+}
+
+
+
+/* fillmography 설정 */
+section:nth-child(3){
+    background-color: #222;
+}
+section:nth-child(3){
+    position: relative;
+}
+
+
+/* 움직이는 필모그래피 글씨 설정 */
+section:nth-child(3) .fillmography_1{
+    width: 3100px;
+    height: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    /* background-color: blueviolet; */
+    position: absolute;
+    top: 6%;
+    transform: rotate(20deg);
+    z-index: 8;
+    /* opacity: 0; */
+}
+section:nth-child(3) .fillmography_1 .fillmography_box{
+    display: flex;
+}
+section:nth-child(3) .fillmography_1 .fillmography_box ul{
+    display: flex;
+    position: absolute;
+}
+section:nth-child(3) .fillmography_1 ul:nth-child(1) {
+    /* background-color: lightcoral; */
+    width: 3100px;
+    left: 0;
+    animation: ani1 50s linear infinite ;
+}
+section:nth-child(3) .fillmography_1 ul:nth-child(2) {
+    /* background-color: lightblue; */
+    width: 3100px;
+    left: 100%;
+    animation: ani2 50s linear infinite ;
+}
+section:nth-child(3) .fillmography_1 ul li{
+    /* width: 19%; */
+    width: 100%;
+    height: 150px;
+    /* border: 2px solid #000; */
+    box-sizing: border-box;
+    font-size: 100px;
+    color: #fff;
+    font-weight: bold;
+    opacity: 0.2;
+    /* background-color: red; */
+}
+
+/* 필모그래피 메뉴들 설정 */
+.fillmography>.menu>ul{
+    width: 250px;
+    height: 200px;
+    /* background-color: orange; */
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    top: 3%;
+}
+.fillmography>.menu>ul>li{
+    width: 400px;
+    /* background-color: blue; */
+    height: auto;
+    display: flex;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+    line-height: 40px;
+    display: flex;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.fillmography>.menu>ul>li:hover>span{
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.8s;
+    margin-right: 20px;
+}
+.fillmography>.menu>ul>li>span{
+    /* background-color: red; */
+    width: 50px;
+    height: 50px;
+}
+.fillmography>.menu>ul>li>span.fm{
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.8s;
+    margin-right: 20px;
+}
+
+
+
+/* 섹션설정 */
+section:nth-child(3) .movie article{
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom:8%;
+    background-color: #000;
+}
+section:nth-child(3) .movie article>img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: -150px;
+    left: 0;
+}
+
+/* nav 설정 */
+section:nth-child(3) .movie nav{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 55%;
+    /* margin-top: -25px; */
+    left: 0;
+    background-image: url(img/tr.png);
+}
+
+section:nth-child(3) .movie nav>ul{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+section:nth-child(3) .movie nav>ul>li{
+    width: 600px;
+    height: 100px;
+    cursor: pointer;
+    position: relative;
+    perspective: 700px;
+}
+section:nth-child(3) .movie nav>ul>li>a{
+    display: block;
+    font-size: 20px;
+    line-height: 2.5;
+    color: #aaa;
+    transition: all 0.4s;
+    text-align: center;
+    font-family: 'Dovemayo_gothic';
+    font-weight: bold;
+}
+
+section:nth-child(3) .movie nav>ul>li:hover>a{
+    transform: translateY(-20px);
+    opacity: 0;
+
+}
+
+
+
+/* 서브메뉴설정 */
+section:nth-child(3) .movie nav div{
+    width: 450px;
+    background-image: url(img/tr.png);
+    border: 1px solid #000;
+    box-sizing: border-box;
+    height: 550px;
+    position: absolute;
+    padding: 10px;
+    top: -275px;
+    opacity: 0;
+    transition: all 0.8s;
+}
+section:nth-child(3) .movie nav>ul>li:hover div{
+    opacity: 1;
+    transform: rotateY(360deg);
+    top: -275px;
+}
+section:nth-child(3) .movie nav div p{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+section:nth-child(3) .movie nav div p img{
+    width: 100%;
+    height: 100%;
+}
+section:nth-child(3) .movie nav div h2{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Dovemayo_gothic';
+    font-weight: bold;
+    margin-top: 15px;
+}
+section:nth-child(3) .movie nav div ul{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+}
+section:nth-child(3) .movie nav div ul li{
+
+}
+section:nth-child(3) .movie nav div ul li a{
+    display: block;
+    width: 100%;
+    height: 180px;
+    text-align: center;
+    /* border-top: 1px dotted #aaa; */
+    color: #aaa;
+    font-size: 15px;
+    line-height: 3;
+    /* background-color: red; */
+}
+
+
+/* 첫번째 잠그기 */
+section:nth-child(3) .movie{
+    /* opacity: 0; */
+    transition: all 0.8s;
+}
+
+
+/* 드라마 설정 */
+/* 섹션설정 */
+section:nth-child(3) .drama article{
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom:8%;
+    background-color: #000;
+}
+section:nth-child(3) .drama article>img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: -150px;
+    left: 0;
+}
+
+/* nav 설정 */
+section:nth-child(3) .drama nav{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 55%;
+    /* margin-top: -25px; */
+    left: 0;
+    background-image: url(img/tr.png);
+}
+
+section:nth-child(3) .drama nav>ul{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+section:nth-child(3) .drama nav>ul>li{
+    width: 600px;
+    height: 100px;
+    cursor: pointer;
+    position: relative;
+    perspective: 700px;
+}
+section:nth-child(3) .drama nav>ul>li>a{
+    display: block;
+    font-size: 20px;
+    line-height: 2.5;
+    color: #aaa;
+    transition: all 0.4s;
+    text-align: center;
+    font-family: 'Dovemayo_gothic';
+    font-weight: bold;
+}
+
+section:nth-child(3) .drama nav>ul>li:hover>a{
+    transform: translateY(-20px);
+    opacity: 0;
+
+}
+
+
+
+/* 서브메뉴설정 */
+section:nth-child(3) .drama nav div{
+    width: 450px;
+    background-image: url(img/tr.png);
+    border: 1px solid #000;
+    box-sizing: border-box;
+    height: 550px;
+    position: absolute;
+    padding: 10px;
+    top: -275px;
+    opacity: 0;
+    transition: all 0.8s;
+}
+section:nth-child(3) .drama nav>ul>li:hover div{
+    opacity: 1;
+    transform: rotateY(360deg);
+    top: -275px;
+}
+section:nth-child(3) .drama nav div p{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+section:nth-child(3) .drama nav div p img{
+    width: 100%;
+    height: 100%;
+}
+section:nth-child(3) .drama nav div h2{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Dovemayo_gothic';
+    font-weight: bold;
+    margin-top: 15px;
+}
+section:nth-child(3) .drama nav div ul{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+}
+section:nth-child(3) .drama nav div ul li{
+
+}
+section:nth-child(3) .drama nav div ul li a{
+    display: block;
+    width: 100%;
+    height: 180px;
+    text-align: center;
+    /* border-top: 1px dotted #aaa; */
+    color: #aaa;
+    font-size: 15px;
+    line-height: 3;
+    /* background-color: red; */
+}
+
+
+/* 두번째 잠그기 */
+section:nth-child(3) .drama{
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+
+/* cf 설정 */
+/* 섹션설정 */
+section:nth-child(3) .cf article{
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom:8%;
+    background-color: #000;
+}
+section:nth-child(3) .cf article>img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: -150px;
+    left: 0;
+}
+
+/* nav 설정 */
+section:nth-child(3) .cf nav{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 55%;
+    /* margin-top: -25px; */
+    left: 0;
+    background-image: url(img/tr.png);
+}
+
+section:nth-child(3) .cf nav>ul{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    /* margin-left: 15px; */
+}
+
+section:nth-child(3) .cf nav>ul>li{
+    width: 600px;
+    height: 100px;
+    cursor: pointer;
+    position: relative;
+    perspective: 700px;
+}
+section:nth-child(3) .cf nav>ul>li>a{
+    display: block;
+    font-size: 20px;
+    line-height: 2.5;
+    color: #aaa;
+    transition: all 0.4s;
+    text-align: center;
+    font-family: 'Dovemayo_gothic';
+    font-weight: bold;
+}
+
+section:nth-child(3) .cf nav>ul>li:hover>a{
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+
+
+/* 서브메뉴설정 */
+section:nth-child(3) .cf nav div{
+    width: 500px;
+    background-image: url(mg/tr.png);
+    border: 1px solid #000;
+    box-sizing: border-box;
+    height: 550px;
+    position: absolute;
+    padding: 10px;
+    top: -275px;
+    opacity: 0;
+    transition: all 0.8s;
+}
+section:nth-child(3) .cf nav>ul>li:hover div{
+    opacity: 1;
+    transform: rotateY(360deg);
+    top: -275px;
+}
+section:nth-child(3) .cf nav div p{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+section:nth-child(3) .cf nav div p img{
+    width: 100%;
+    height: 100%;
+}
+section:nth-child(3) .cf nav div h2{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Dovemayo_gothic';
+    font-weight: bold;
+    margin-top: 15px;
+}
+section:nth-child(3) .cf nav div ul{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    /* background-color: red; */
+}
+section:nth-child(3) .cf nav div ul li{
+
+}
+section:nth-child(3) .cf nav div ul li a{
+    display: block;
+    width: 100%;
+    height: 180px;
+    text-align: center;
+    /* border-top: 1px dotted #aaa; */
+    color: #aaa;
+    font-size: 15px;
+    line-height: 3;
+    /* background-color: red; */
+}
+section:nth-child(3) .cf{
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+/* 마스터워크 설정 */
+
+section:nth-child(4){
+    background-color: #353535;
+}
+section:nth-child(4){
+    position: relative;
+}
+/* 움직이는 글씨 설정 */
+section:nth-child(4) .masterwork{
+    width: 3700px;
+    height: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    /* background-color: blueviolet; */
+    position: absolute;
+    bottom: 0;
+    left: -85%;
+    transform: rotate(-90deg);
+}
+section:nth-child(4) .masterwork .masterwork_box{
+    display: flex;
+}
+section:nth-child(4) .masterwork .masterwork_box ul{
+    display: flex;
+    position: absolute;
+}
+section:nth-child(4) .masterwork ul:nth-child(1){
+    /* background-color: lightcoral; */
+    /* width: 2400px; */
+    left: 0;
+    width: 3700px;
+    animation: ani1 50s linear infinite ;
+}
+section:nth-child(4) .masterwork ul:nth-child(2){
+    /* background-color: lightblue; */
+    /* width: 2400px; */
+    left: 100%;
+    width: 3700px;
+    animation: ani2 50s linear infinite ;
+}
+section:nth-child(4) .masterwork ul li{
+    /* width: 19%; */
+    width: 100%;
+    height: 150px;
+    /* border: 2px solid #000; */
+    box-sizing: border-box;
+    font-size: 100px;
+    color: #fff;
+    font-weight: bold;
+    opacity: 0.2;
+    /* background-color: red; */
+}
+
+/* .about li:hover{
+    color: red;
+} */
+
+
+/* 버튼 설정 */
+.masterwork_big{
+
+}
+.masterwork_big ul{
+    display: flex;
+    width: auto;
+    height: 100px;
+    /* background-color: red; */
+    align-items: center;
+    position: absolute;
+    right: 1.5%;
+    top: 3%;
+}
+.masterwork_big ul li{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    margin-right: 40px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222;
+}
+.masterwork_big ul li:hover{
+    color:#fff;
+    background-color: #BC4E4E;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: all 0.8s;
+}
+
+/* 버튼을 눌렀을 때 나오는 큰 박스 */
+section:nth-child(4) .masterwork_Bbox{
+    position: absolute;
+    left: 15%;
+    top: 15%;
+    /* background-color: lightcoral; */
+    width: 1550px;
+    height: 780px;
+}
+section:nth-child(4) .masterwork_Bbox>ul{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li{
+    display: none;
+}
+/* 응답하라 1988 (2015) */
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(1){
+    /* display: none; */
+    display: block;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(1)>div:nth-child(1){
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(1)>div:nth-child(1) span{
+    border-right: 1px solid #fff;
+    width: 20%;
+    height: 150px;
+    /* background-color: red; */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 80px;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(1)>div:nth-child(1) b{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 80px;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(1)>div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+    /* background-color: #0010a9; */
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(1)>div:nth-child(2)>div:nth-child(1){
+    background-image: url(img/B_4_2.jpg);
+    width: 40%;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: red; */
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(1)>div:nth-child(2)>div:nth-child(2){
+    background-image: url(img/1988_g.gif);
+    width: 60%;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: #888; */
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(1)>div:nth-child(3){
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 1550px;
+    height: 150px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 28px;
+    position: absolute;
+    z-index: 3;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(1)>div:nth-child(3)>span{
+    font-size: 40px;
+    color: #FED8D8;
+    position: absolute;
+    z-index: 8;
+}
+/* 운빨로맨스 (2016) */
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(2){
+    /* display: none; */
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(2)>div:nth-child(1){
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(2)>div:nth-child(1) span{
+    border-right: 1px solid #fff;
+    width: 20%;
+    height: 150px;
+    /* background-color: red; */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 80px;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(2)>div:nth-child(1) b{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 80px;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(2)>div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+    /* background-color: #0010a9; */
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(2)>div:nth-child(2)>div:nth-child(1){
+    background-image: url(img/1988_g_1.gif);
+    width: 60%;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: #888; */
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(2)>div:nth-child(2)>div:nth-child(2){
+    background-image: url(img/B_4_4.jpg);
+    width: 40%;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: red; */
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(2)>div:nth-child(3){
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 1550px;
+    height: 150px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 28px;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(2)>div:nth-child(3)>span{
+    font-size: 40px;
+    color: #FED8D8;
+}
+
+/* 택시운전사 (2017) */
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(3){
+    /* display: none; */
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(3)>div:nth-child(1){
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(3)>div:nth-child(1) span{
+    border-right: 1px solid #fff;
+    width: 20%;
+    height: 150px;
+    /* background-color: red; */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 80px;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(3)>div:nth-child(1) b{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 80px;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(3)>div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+    /* background-color: #0010a9; */
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(3)>div:nth-child(2)>div:nth-child(1){
+    background-image: url(img/B_4_6.jpg);
+    width: 40%;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* background-color: #888; */
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(3)>div:nth-child(2)>div:nth-child(2){
+    background-image: url(img/1988_g_2.gif);
+    width: 60%;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: red; */
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(3)>div:nth-child(3){
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 1550px;
+    height: 150px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 28px;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(3)>div:nth-child(3)>span{
+    font-size: 40px;
+    color: #FED8D8;
+}
+
+
+/* 리틀포레스트 (2018) */
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(4){
+    /* display: none; */
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(4)>div:nth-child(1){
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(4)>div:nth-child(1) span{
+    border-right: 1px solid #fff;
+    width: 20%;
+    height: 150px;
+    /* background-color: red; */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 80px;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(4)>div:nth-child(1) b{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 80px;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(4)>div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+    /* background-color: #0010a9; */
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(4)>div:nth-child(2)>div:nth-child(1){
+    background-image: url(img/1988_g_3.gif);
+    width: 60%;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: #888; */
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(4)>div:nth-child(2)>div:nth-child(2){
+    background-image: url(img/B_4.jpg);
+    width: 40%;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: red; */
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(4)>div:nth-child(3){
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 1550px;
+    height: 150px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 28px;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(4)>div:nth-child(3)>span{
+    font-size: 40px;
+    color: #FED8D8;
+}
+/* 독전 (2018) */
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(5){
+    /* display: none; */
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(5)>div:nth-child(1){
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(5)>div:nth-child(1) span{
+    border-right: 1px solid #fff;
+    width: 20%;
+    height: 150px;
+    /* background-color: red; */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 80px;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(5)>div:nth-child(1) b{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 80px;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(5)>div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+    /* background-color: #0010a9; */
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(5)>div:nth-child(2)>div:nth-child(1){
+    background-image: url(img/B_4_9.jpg);
+    width: 40%;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: red; */
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(5)>div:nth-child(2)>div:nth-child(2){
+    background-image: url(img/B_4_8.gif);
+    width: 60%;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: #888; */
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(5)>div:nth-child(3){
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 1550px;
+    height: 150px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 28px;
+}
+section:nth-child(4) .masterwork_Bbox>ul>li:nth-child(5)>div:nth-child(3)>span{
+    font-size: 40px;
+    color: #FED8D8;
+}
+
+
+/* 릴레이션쉽 설정 */
+/* 움직이는 글씨 설정 */
+
+section:nth-child(5){
+    background-color: #CFCFCF;
+}
+section:nth-child(5){
+    position: relative;
+}
+section:nth-child(5) .relationship{
+    width: 3700px;
+    height: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    /* background-color: blueviolet; */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+section:nth-child(5) .relationship .relationship_box{
+    display: flex;
+}
+section:nth-child(5) .relationship .relationship_box ul{
+    display: flex;
+    position: absolute;
+}
+section:nth-child(5) .relationship ul:nth-child(1){
+    /* background-color: lightcoral; */
+    /* width: 2400px; */
+    left: 0;
+    width: 3700px;
+    animation: ani1 50s linear infinite ;
+}
+section:nth-child(5) .relationship ul:nth-child(2){
+    /* background-color: lightblue; */
+    /* width: 2400px; */
+    left: 100%;
+    width: 3700px;
+    animation: ani2 50s linear infinite ;
+}
+section:nth-child(5) .relationship ul li{
+    /* width: 19%; */
+    width: 100%;
+    height: 150px;
+    /* border: 2px solid #000; */
+    box-sizing: border-box;
+    font-size: 100px;
+    color: #8C8C8C;
+    font-weight: bold;
+    opacity: 0.2;
+    /* background-color: red; */
+}
+
+/* 릴레이션쉽 메뉴 설정 */
+.relationship_big{
+    position: absolute;
+    left: 20%;
+    top: 25%;
+    width: 700px;
+    height: 600px;
+    /* background-color: red; */
+    /* position: absolute; */
+}
+.relationship_big ul li{
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    /* background-color: red; */
+    display: flex;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.relationship_big>ul>li>span{
+    width: 350px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left: 25%;
+}
+.relationship_big>ul>li>div{
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -20px;
+    right: 25%;
+    position: absolute;
+}
+section:nth-child(5) .relationship_big ul li:hover{
+    color: #BC4E4E;
+    transition: all 0.8s;
+    text-shadow: 5px 5px 5px rgba(34, 34, 34, 0.5);
+}
+section:nth-child(5) .relationship_big ul li:hover span{
+    background-color: #BC4E4E;
+    transition: all 0.8s;
+    box-shadow: 5px 5px 5px rgba(34, 34, 34, 0.5);
+}
+section:nth-child(5) .relationship_big ul li:hover div{
+    background-color: #BC4E4E;
+    transition: all 0.8s;
+    box-shadow: 5px 5px 5px rgba(34, 34, 34, 0.5);
+}
+.relationship_big ul li:nth-child(1){
+    right: -15%;
+}   
+.relationship_big ul li:nth-child(2){
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    color: #fff;
+    /* background-color: red; */
+    display: flex;
+    font-weight: bold;
+}
+.relationship_big ul li:nth-child(3){
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    color: #fff;
+    /* background-color: red; */
+    display: flex;
+    font-weight: bold;
+}
+.relationship_big>ul>li:nth-child(3)>span{
+    margin-left: -30px;
+}
+.relationship_big ul li:nth-child(4){
+    position: absolute;
+    top: 90%;
+    width: 100%;
+    color: #fff;
+    /* background-color: red; */
+    display: flex;
+    font-weight: bold;
+}
+.relationship_big>ul>li:nth-child(4)>span{
+    margin-left: 70px;
+}
+.relationship_big>ul>li:nth-child(4)>div{
+    right: 10%;
+}
+
+/* 숨겨져 있는 것들 설정 */
+/* 동그라미 */
+section:nth-child(5) .re_hide{
+    position: absolute;
+    bottom: 50%;
+    margin-bottom: -400px;
+    right: -10%;
+    width: 800px;
+    height: 800px;
+    z-index: 999;
+}
+section:nth-child(5) .re_hide ul{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #222;
+    border-radius: 50%;
+    display: none;
+    transition: all 0.8s;
+    border-radius: 50%;
+}
+section:nth-child(5) .re_hide ul li{
+    position: absolute;
+    width: 350px;
+    height: 250px;
+}
+section:nth-child(5) .re_hide ul:nth-child(2){
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* background-color: red; */
+}
+section:nth-child(5) .re_hide ul:nth-child(3){
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* background-color: lightcoral; */
+}
+section:nth-child(5) .re_hide ul:nth-child(4){
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* background-color: blue; */
+}
+section:nth-child(5) .re_hide ul li:nth-child(1){
+    background-color: olive;
+    top: 50%;
+    left: -20%;
+    margin-top: -125px;
+}
+section:nth-child(5) .re_hide ul li:nth-child(2){
+    background-color: orange;
+    left: 50%;
+    top: -13.7%;
+    margin-left: -175px;
+    transform: rotate(90deg);
+    /* 800 800 */
+}
+section:nth-child(5) .re_hide ul li:nth-child(3){
+    background-color: pink;
+    right: -20%;
+    top: 50%;
+    margin-top: -125px;
+    transform: rotate(180deg);
+}
+section:nth-child(5) .re_hide ul li:nth-child(4){
+    background-color: #BC4E4E;
+    left: 50%;
+    bottom: -13.7%;
+    margin-left: -175px;
+    transform: rotate(270deg);
+}
+/* li에 사진넣기 */
+section:nth-child(5) .re_hide ul li{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+section:nth-child(5) .re_hide ul:nth-child(1) li:nth-child(1){
+    background-image: url(img/soccer_1.jpg);
+}
+section:nth-child(5) .re_hide ul:nth-child(1) li:nth-child(2){
+    background-image: url(img/soccer_5.jpg);
+}
+section:nth-child(5) .re_hide ul:nth-child(1) li:nth-child(3){
+    background-image: url(img/soccer_3.jpg);
+}
+section:nth-child(5) .re_hide ul:nth-child(1) li:nth-child(4){
+    background-image: url(img/soccer_4.jpg);
+}
+section:nth-child(5) .re_hide ul:nth-child(2) li:nth-child(1){
+    background-image: url(img/byh48_1.jpg);
+}
+section:nth-child(5) .re_hide ul:nth-child(2) li:nth-child(2){
+    background-image: url(img/byh48_2.png);
+}
+section:nth-child(5) .re_hide ul:nth-child(2) li:nth-child(3){
+    background-image: url(img/byh48_4.jpg);
+}
+section:nth-child(5) .re_hide ul:nth-child(2) li:nth-child(4){
+    background-image: url(img/byh48_5.jpg);
+}
+section:nth-child(5) .re_hide ul:nth-child(3) li:nth-child(1){
+    background-image: url(img/1988_1.jpg);
+}
+section:nth-child(5) .re_hide ul:nth-child(3) li:nth-child(2){
+    background-image: url(img/1988_9.jpg);
+}
+section:nth-child(5) .re_hide ul:nth-child(3) li:nth-child(3){
+    background-image: url(img/1988_15.jpg);
+}
+section:nth-child(5) .re_hide ul:nth-child(3) li:nth-child(4){
+    background-image: url(img/1988_17.jpg);
+}
+section:nth-child(5) .re_hide ul:nth-child(4) li:nth-child(1){
+    background-image: url(img/g_4.jpg);
+}
+section:nth-child(5) .re_hide ul:nth-child(4) li:nth-child(2){
+    background-image: url(img/g_6.jpg);
+}
+section:nth-child(5) .re_hide ul:nth-child(4) li:nth-child(3){
+    background-image: url(img/g_1.jpg);
+}
+section:nth-child(5) .re_hide ul:nth-child(4) li:nth-child(4){
+    background-image: url(img/g_3.jpg)
+}
+/* 동그라미 돌릴 때 버튼 */
+section:nth-child(5) .re_b{
+    /* background-color: red; */
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    right: 30%;
+    bottom: 12%;
+    z-index: 999;
+    display: none;
+}
+section:nth-child(5) .re_b>ul{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+}
+section:nth-child(5) .re_b>ul li{
+    width: 75px;
+    height: 75px;
+    /* background-color: #D6806E; */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+section:nth-child(5) .re_b>ul li:nth-child(2){
+    display: flex;
+    justify-content: end;
+}
+section:nth-child(5) .re_b>ul li i{
+    font-size: 40px;
+    color: #222;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/* 류준열 사진 설정 */
+.relationship_img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-image: url(img/re_bg_img.png);
+    background-size: cover;
+    width: 800px;
+    height: 800px;
+    background-repeat: no-repeat;
+    /* background-color: orange; */
+}
+/* 처음으로 돌아가라 버튼 */
+.re_hide .delete{
+    width: 150px;
+    height: 150px;
+    background-color: #D6806E;
+    position: absolute;
+    left: 42%;
+    top: 50%;
+    margin-top: -75px;
+    z-index: 999;
+    border-radius: 50%;
+    animation: gelatine 1s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 25px;
+    color: #fff;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 0.8s;
+}
+@keyframes gelatine {
+    from, to {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+}
+
+/* 갤러리 움직이는 글씨 설정 */
+/* 움직이는 필모그래피 글씨 설정 */
+
+section:nth-child(6){
+    background-color: #222;
+}
+
+section:nth-child(6){
+    position: relative;
+    /* overflow: hidden; */
+}
+section:nth-child(6) .gallery{
+    width: 2300px;
+    height: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    /* background-color: blueviolet; */
+    position: absolute;
+    bottom: 0;
+    z-index: 8;
+    /* opacity: 0; */
+}
+section:nth-child(6) .gallery .gallery_box{
+    display: flex;
+}
+section:nth-child(6) .gallery .gallery_box ul{
+    display: flex;
+    position: absolute;
+}
+section:nth-child(6) .gallery ul:nth-child(1) {
+    /* background-color: lightcoral; */
+    width: 2300px;
+    left: 0;
+    animation: ani1 50s linear infinite ;
+}
+section:nth-child(6) .gallery ul:nth-child(2) {
+    /* background-color: lightblue; */
+    width: 2300px;
+    left: 100%;
+    animation: ani2 50s linear infinite ;
+}
+section:nth-child(6) .gallery ul li{
+    /* width: 19%; */
+    width: 100%;
+    height: 150px;
+    /* border: 2px solid #000; */
+    box-sizing: border-box;
+    font-size: 100px;
+    color: #fff;
+    font-weight: bold;
+    opacity: 0.2;
+    /* background-color: red; */
+}
+
+
+
+body {
+    height: 10000px;
+}
+section:nth-child(6) .box2 {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    /* border: 20px solid red; */
+}
+section:nth-child(6) .box2>.scroll-animation-example {
+    width: auto;
+    height: 100vh;
+    /* background-color: lightcoral; */
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection{
+    width: 11000px;
+    height: 800px;
+    /* background-color: blueviolet; */
+    position: absolute;
+    left: 200px;
+    top: 12%;
+}
+section:nth-child(6).fix{
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* background-color: #fff; */
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection>.item{
+    display: inline-block;
+    position: relative;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection > .item.-big{
+    height: 720px;
+    width: 540px;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection > .item.-big.-horizontal {
+    height: 540px;
+    width: 720px;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection > .item.-normal {
+    height: 540px;
+    width: 405px;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection > .item.-normal.-horizontal {
+    height: 405px;
+    width: 540px;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection > .item.-small {
+    height: 360px;
+    width: 270px;
+    z-index: 2;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection > .item.-small.-horizontal {
+    height: 270px;
+    width: 360px;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection > .item > .image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    filter: grayscale(1);
+    transition: filter .3s ease, opacity 1s ease, transform 1s ease;
+    cursor: pointer;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection > .item > .image:hover{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: grayscale(0);
+    cursor: pointer;
+    opacity: 1;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection div:nth-child(1){
+    left: 0;
+    top: -10%;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection div:nth-child(2){
+    left: -2%;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection div:nth-child(5){
+    left: -11.5%;
+    top: -17%;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection div:nth-child(6){
+    left: -13%;
+    top: -11%;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection div:nth-child(10){
+    left: -25%;
+    top: 0;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection div:nth-child(11){
+    left: -27%;
+    top: -15%;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection div:nth-child(12){
+    left: -29%;
+    top: -13%;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection div:nth-child(13){
+    left: -30%;
+    top: -27%;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection div:nth-child(14){
+    left: -32%;
+    top: 0;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection div:nth-child(15){
+    left: -33%;
+    top: -25%;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection div:nth-child(17){
+    left: -37.5%;
+    top: 0;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection div:nth-child(18){
+    left: -39%;
+    top: -25%;
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection div:nth-child(19){
+    left: -40%;
+    top: -27%;
+    /* background-color: red; */
+}
+section:nth-child(6) .box2 .scroll-animation-example .scrollsection div:nth-child(20){
+    left: -41%;
+    top: -3%;
+    /* background-color: red; */
+}
+/* 버튼 */
+section:nth-child(6) .container{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    perspective: 1000;
+    backface-visibility: hidden;
+    z-index: 999;
+    width: 1100vh;
+}
+section:nth-child(6) .pulse-button {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
+    font-weight: light;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 100px;
+    letter-spacing: -1px;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    background: #d6806e;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgba(214, 128, 110, 0.5);
+    animation: pulse 1.5s infinite;
+}
+section:nth-child(6) .pulse-button:hover {
+    animation: none;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(.9);
+}
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 50px rgba(214, 128, 110, 0.5);
+}
+    100% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(214, 128, 110, 0.5);
+}
+}

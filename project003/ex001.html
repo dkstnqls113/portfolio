@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서브html이 없는 예제</title>
+    <link rel="stylesheet" href="css/ex001.css">
+    <!-- 제이쿼리 CDN -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/ex001.js"></script>
+
+    <!-- 파일설명
+    menu에 있는 각 페이지를 모두 다 연결하고
+연결페이지는 popup 또는 다른 섹션으로의 이동으로 
+표현하는 구조로 html 내부안에 menu의 갯수만큼의
+섹션을 보유한다.-->
+</head>
+<body>
+    <h1>home</i></h1>
+    <!-- home으로 넣기 -->
+    <nav>
+        <ul>
+            <li class="on">ABOUT<span></span></li>
+            <li>FILLMOGRAPHY<span></span></li>
+            <li>GALLERY<span></span></li>
+            <li>VIDEO<span></span></li>
+        </ul>
+    </nav>
+
+
+    <div id="wrap">
+        <section>메인 또는 intro 
+            <div class="wel">Wellcome</div>
+        </section>
+
+
+        <section>ABOUT</section>
+        <section>FILLMOGRAPHY</section>
+        <section>GALLERY</section>
+        <section>VIDEO</section>
+    </div>
+</body>
+</html>
